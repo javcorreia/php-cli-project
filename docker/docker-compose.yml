@@ -1,7 +1,7 @@
 version: '3'
 services:
-  log-analyser:
-    image: log-analyser
+  console:
+    image: console
     build:
       context: .
       dockerfile: Dockerfile
