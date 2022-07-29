@@ -1,0 +1,14 @@
+version: '3'
+services:
+  log-analyser:
+    image: log-analyser
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: tail -f /dev/null
+    volumes:
+      - '../:/app'
+  redis:
+    image: 'redis:7.0-alpine'
+    ports:
+      - '6380:6379'
