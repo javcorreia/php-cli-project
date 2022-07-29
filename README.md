@@ -1,8 +1,8 @@
-# PHP CLI Project
-Simple cli project for a variety of usages. All up to you.
+# PHP CLI Project Starter
+Simple cli project starter for a variety of usages. All up to you.
 
 It uses [symfony/console](https://symfony.com/doc/current/components/console.html) to implement cli commands  
-and redis for cache system, if needed.  
+and redis for [cache](https://symfony.com/doc/current/components/cache.html), if needed.  
 And it comes with a sqlite database for simple sql db needs.
 
 ## Project Installation
