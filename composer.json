@@ -16,7 +16,6 @@
     "minimum-stability": "stable",
     "require": {
         "php": "^8.1",
-        "ipinfo/ipinfo": "^2.3",
         "symfony/console": "^6.1",
         "symfony/cache": "^6.1",
         "predis/predis": "^2.0",

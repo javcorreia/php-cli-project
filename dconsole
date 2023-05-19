@@ -1,0 +1,4 @@
+#!/bin/bash
+CONTAINER_NAME=$(docker ps --filter "name=console" --format "{{.Names}}")
+
+docker exec -t --user "$(id -u)":"$(id -g)" "$CONTAINER_NAME" ./console "$@"
