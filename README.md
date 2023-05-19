@@ -9,29 +9,34 @@ And it comes with a sqlite database for simple sql db needs.
 - download project files
 - install [docker](https://docs.docker.com/engine/install/) on your system
 - run `docker compose up` in docker folder and wait for the first build (later executions are faster)
-- get inside main container with the following command: (_the following will work in linux, other OS's may vary slightly_)
-    ```shell script
-    ./dockerterm
-    ```     
-  or use another way related to your installation (gui tools, etc)
-- run `./dcomposer install` in root directory (the one with _composer.json_ and _composer.lock_ files)
+- in project root (the one with _composer.json_ and _composer.lock_ files) run:
+  ```shell script
+  ./bin/dcomposer install
+  ```
 
-## Useful commands
-- `dockerterm`: wrapper of `docker exec` to enter inside the console container to execute commands as your current user (useful if creating files inside de container, like a composer install)
+## Useful commands in `bin` folder
+- `dockerterm`: wrapper of `docker exec -it` to enter inside the console container to execute commands as your current user (useful if creating files inside the container)
 - `dockertermroot`: the same as above, but as the root user.
 - `dconsole`: wrapper to the application console command inside the container. No need to open a terminal into the container to execute it.
 - `dcomposer`: wrapper to composer inside console docker container. No need to open a terminal into the container to execute it.
+### Tip
+In most Linux systems you can run this in you terminal to run the above commands without the trailing dot slash:
+```shell script
+export PATH=$PATH:$PWD/bin
+```
+Also, you can put it inside your `.bashrc` file if you want to make it permanent.  
+Other shells may vary.
 
 ## Usage
 - the main config is in class `Config.php`  
   change it according to your needs.
 - to execute commands use the `dconsole` main executable, for example, run test command to see its help:
     ```shell script
-    ./dconsole app:test -h
+    ./bin/dconsole app:test -h
     ```
 - list all available commands:
     ```shell script
-    ./dconsole
+    ./bin/dconsole
     ```
 
 ## Create new commands
