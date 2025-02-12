@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run --rm --interactive --tty --volume $PWD/app:/app --user $(id -u):$(id -g) composer:2.7 install --ignore-platform-reqs --prefer-dist --no-progress --no-interaction --optimize-autoloader
