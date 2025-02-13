@@ -30,3 +30,5 @@ COPY app /app/.
 COPY app/.env.example /app/.env
 
 WORKDIR /app
+
+CMD ["tail", "-f", "/dev/null"]

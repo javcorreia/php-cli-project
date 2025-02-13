@@ -9,6 +9,8 @@ It uses:
 - [Monolog](https://github.com/Seldaek/monolog) for logging needs.
 - it comes with a sqlite database for simple sql db needs.
 
+---
+
 ## Project Installation
 - download project files
   - download zip file: https://github.com/javcorreia/php-cli-project/archive/refs/heads/main.zip
@@ -21,7 +23,6 @@ It uses:
 - install [docker](https://docs.docker.com/engine/install/) on your system
 - run `bin/composer-install` to add the vendor folder to the project
 - run `docker compose up --watch` in docker folder and wait for the first build (later executions are faster)
-- run `app/dconsole` to see the available commands
 - **TIP**: if you need to install new composer packages, use the docker composer via the following command:
   ```shell script
   bin/composer require vendor/package
@@ -35,6 +36,8 @@ It uses:
   composer -d app install --ignore-platform-reqs --prefer-dist --optimize-autoloader
   ```
 
+---
+
 ## Usage 
 - all configurations are in the `.env` file.  
 - the `.env` file is not versioned:
@@ -47,6 +50,8 @@ It uses:
 ### without Docker
 - to execute commands use the `console` main executable
 - to list all available commands `app/console`:
+
+---
 
 ## Create new commands
 - Create new commands in folder `src/Commands`  
@@ -74,6 +79,8 @@ It uses:
   ```
 - new commands are auto-registered as long as they live in the root of `src/Commands` folder
 
+---
+
 ## Logging
 [Monolog](https://github.com/Seldaek/monolog) is installed and a helper class, `app/Logger/Log.php`, is available to use.  
 The usual levels are available: `debug`, `info`, `notice`, `warning`, `error`, `critical`, `alert`, `emergency`.  
@@ -84,6 +91,8 @@ Log::alert('This is an alert');
 Log::debug('This is a debug message with some context info', ['context' => 'value']);
 // ... etc
 ```
+
+---
 
 ## Caching
 [Symfony Cache Component](https://symfony.com/doc/current/components/cache.html) is installed and a helper class, `app/Cache/Cache.php`, is available to use.  

@@ -3,3 +3,5 @@ README.md
 .idea
 app/.env
 Dockerfile
+.dockerignore
+app/dconsole

@@ -18,7 +18,9 @@ services:
         - action: rebuild
           path: ./app/.env.example
           target: ./app/.env.example
-    command: tail -f /dev/null
+        - action: rebuild
+          path: ./app/composer.lock
+          target: ./app/composer.lock
   redis:
     image: 'redis:7.0-alpine'
     ports:
